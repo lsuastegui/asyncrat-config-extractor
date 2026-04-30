@@ -44,6 +44,34 @@ Install dependency:
 
 `python3 extract_asyncrat_iocs.py sample.exe`
 
+## Example Output
+
+```
+[*] Sample: sample.exe
+[*] Computing hashes ...
+    SHA256: 4c3b97c157d08ee298edb5d30fa86a3b90b04fedf...
+[*] Extracting strings ...
+
+============================================================
+  AsyncRAT IoC Extraction Report
+============================================================
+
+[NETWORK IOCs]
+  C2 Domains : lanka-add.com, trackparty.co.uk
+  C2 IPs     : 82.165.179.9
+  C2 Ports   : 443, 80
+  C2 Sockets :
+    - lanka-add.com:443
+    - trackparty.co.uk:80
+
+[HOST IOCs]
+  Mutex        : AsyncMutex_6SI8OkPnk
+  Install Path : %AppData%
+
+[CONFIG]
+  Campaign Group : i50kIPUw6doG
+  Version        : 0.5.7B
+```
 
 
 ## Notes
