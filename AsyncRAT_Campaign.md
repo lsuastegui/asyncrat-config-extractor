@@ -74,9 +74,9 @@ xl365.livebytexscore.com
 ```
 
 ### Campaign Identifiers
-ECeDRSA3bolG
-6I1A2I5KBH4Q
-5Q2ZsaDMmVnm
+- ECeDRSA3bolG
+- 6I1A2I5KBH4Q
+- 5Q2ZsaDMmVnm
 
 ## Diamond Model Analysis
 
@@ -105,6 +105,12 @@ The strongest relationships observed:
 | Obfuscation | Moderate |
 | Dynamic C2 | Not observed |
 | Operational sophistication | Low to medium |
+
+## Tooling
+
+IoCs were extracted using a custom-built script:
+
+[extract_asyncrat_iocs.py](https://github.com/lsuastegui/asyncrat-config-extractor) 
 
 ## Conclusion
 
