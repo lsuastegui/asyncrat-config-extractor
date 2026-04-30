@@ -25,13 +25,13 @@ The extractor only works on specific AsyncRAT versions/config formats, so valida
 
 Install dependency:
 
-pip3 install pycryptodome
+`pip3 install pycryptodome`
 
 
 
 ## Step 1 — Validate the Sample with YARA
 
-yara asyncrat_extractor_compatible.yara sample.exe
+`yara asyncrat_extractor_compatible.yara sample.exe`
 
 ### Output Meaning
 
@@ -42,7 +42,7 @@ yara asyncrat_extractor_compatible.yara sample.exe
 
 ## Step 2 — Run the Extractor
 
-python3 extract_asyncrat_iocs.py sample.exe
+`python3 extract_asyncrat_iocs.py sample.exe`
 
 
 
