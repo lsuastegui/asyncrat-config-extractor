@@ -1,7 +1,5 @@
 # AsyncRAT Campaign Analysis: Infrastructure Patterns, IoCs, and Operational Insights
 
-## Overview
-
 This report documents the analysis of multiple samples associated with AsyncRAT, a widely used open-source remote access trojan (RAT) frequently leveraged in commodity malware campaigns.
 
 The objective of this research was to:
@@ -9,8 +7,6 @@ The objective of this research was to:
 - Extract and validate network-based Indicators of Compromise (IoCs)
 - Identify infrastructure patterns across samples
 - Evaluate consistency in operator tradecraft
-
-All data presented here reflects static analysis of 100 samples using a custom extraction tool.
 
 ## Key Findings
 
@@ -82,3 +78,45 @@ ECeDRSA3bolG
 6I1A2I5KBH4Q
 5Q2ZsaDMmVnm
 
+## Diamond Model Analysis
+
+The activity observed can be mapped using the Diamond Model of Intrusion Analysis:
+<p align="center">
+  <img src="/image/async_diamond.png" width="700">
+</p>
+
+### Relationships
+
+The strongest relationships observed:
+
+- One domain → multiple subdomains → multiple campaign labels  
+- One configuration → reused across multiple samples  
+- Builder-driven artifacts → consistent across campaigns  
+
+
+
+## Tradecraft Assessment
+
+| Behavior | Assessment |
+|--------|----------|
+| Infrastructure reuse | High |
+| Domain segmentation | Consistent |
+| Use of legitimate ports | Yes |
+| Obfuscation | Moderate |
+| Dynamic C2 | Not observed |
+| Operational sophistication | Low to medium |
+
+## Conclusion
+
+This analysis demonstrates that AsyncRAT campaigns:
+
+- Rely heavily on reusable infrastructure  
+- Use subdomain-based segmentation  
+- Blend into normal web traffic  
+- Generate noisy artifacts requiring analyst validation  
+
+While technically unsophisticated, these campaigns remain effective due to:
+
+- Ease of deployment  
+- Availability of tooling  
+- Low operational cost  
